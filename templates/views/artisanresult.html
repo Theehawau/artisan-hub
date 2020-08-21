@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Artisan</title>
+		<link rel="stylesheet" href="../../public/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+		/>
+		<script
+			src="https://kit.fontawesome.com/049b95a946.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="result-header h3 p2">
+			<form action="" method="get" class="search-form">
+				<select
+					name="lga"
+					id=""
+					class="btn-1"
+					aria-label="Region"
+					aria-placeholder="Region"
+				>
+					<option value="" selected>Region</option>
+					<option value="ilorinSouth">Ilorin South</option>
+					<option value="ilorinEast">Ilorin East</option>
+					<option value="ilorinWesr">Ilorin West</option>
+				</select>
+				<select
+					name="category"
+					id=""
+					class="btn-1"
+					aria-label="Category"
+					aria-placeholder="Category"
+				>
+					<option value="">Expertise</option>
+					<option value="ilorinSouth">Plumber</option>
+					<option value="ilorinEast">Mechanic</option>
+					<option value="ilorinWesr">Electrician</option>
+				</select>
+				<input
+					type="search"
+					name="search"
+					id=""
+					placeholder="Search artisan"
+					aria-placeholder="Search artisan"
+					class="search-box"
+				/>
+				<input
+					type="submit"
+					value="Search"
+					class="submit-search bg-near-black green"
+				/>
+			</form>
+		</div>
+		<div class="result-label ph3 ph5-m ph6-l pv3">
+			<a href="http://">Home /Search Results /Artisan Name </a>
+		</div>
+		<div class="ph6-l">
+			<div class="horizontal-card bg-white mt4 mb4 pa3 br2 shadow-2">
+				<div class="">
+					<img
+						src="../../public/images/Rectangle 21.png"
+						alt="Artisan Avatar"
+					/>
+				</div>
+				<div class="ph3">
+					<p class=" ">ARtisan Name</p>
+					<p>Artisan Phone</p>
+					<p>Expertise</p>
+					<p>Address, Region</p>
+					<!-- <ul>
+						<li></li>
+						<li>Artisan Phone</li>
+						<li>Expertise</li>
+						<li>Address, Region</li>
+					</ul> -->
+				</div>
+				<div class="tr mb1 mr1">
+					<button class="pa2 ph3-l">
+						<a href="tel:+">Call this Artisan</a>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="ph6-l">
+			<div class="bg-white mb4 artisan-location">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.685194015705!2d3.426487514784879!3d6.434466895344724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9aa7ed571905%3A0x3d7d850142d42ef!2sANCHOR%20INSURANCE%20COMPANY%20LIMITED!5e0!3m2!1sen!2sng!4v1597951882856!5m2!1sen!2sng"
+					width="600"
+					height="450"
+					frameborder="0"
+					style="border: 0;"
+					allowfullscreen=""
+					aria-hidden="false"
+					tabindex="0"
+				></iframe>
+			</div>
+		</div>
+		<div class="ph6-l">
+			<article class="mw5 mw6-ns br3 hidden ba b--black-10 mv4">
+				<h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">
+					Rate Artisan
+				</h1>
+				<div class="pa3 bt b--black-10">
+					<form action="" method="post">
+						<input
+							type="text"
+							name="comment"
+							id=""
+							placeholder="Write a Comment"
+							class="fl w-75 mr2 pv2 ph1"
+						/>
+						<input type="submit" value="Post" class="comment fl w-20 pv2 ph3" />
+						<label for="rating" class="mt2 mr2 mb2">Rate</label>
+						<input
+							type="number"
+							name="rating"
+							id="rating"
+							max="5"
+							min="1"
+							class="ma2 pa1"
+							value="5"
+						/>
+					</form>
+				</div>
+			</article>
+		</div>
+		<footer class="pv4 ph3 ph5-m ph6-l mid-gray bg-near-black">
+			<small class="f6 db tc"
+				>© 2020 <b class="ttu">D-POSITIVE GLOBAL Inc</b>., All Rights
+				Reserved</small
+			>
+		</footer>
+	</body>
+</html>

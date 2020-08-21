@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Login</title>
+		<link rel="stylesheet" href="../../public/css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+		/>
+		<script
+			src="https://kit.fontawesome.com/049b95a946.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<main class="pa4 black-80">
+			<form class="measure center">
+				<fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+					<legend class="f4 fw6 ph0 mh0">Log In to your dashboard</legend>
+					<div class="mt3">
+						<label class="db fw6 lh-copy f6" for="email-address">Email</label>
+						<input
+							class="pa2 input-reset ba bg-transparent hover-black w-100"
+							type="email"
+							name="email-address"
+							id="email-address"
+						/>
+					</div>
+					<div class="mv3">
+						<label class="db fw6 lh-copy f6" for="password">Password</label>
+						<input
+							class="b pa2 input-reset ba bg-transparent hover-black w-100"
+							type="password"
+							name="password"
+							id="password"
+						/>
+					</div>
+				</fieldset>
+				<div class="">
+					<input
+						class="b ph3 pv2 input-reset ba b--black bg-g grow pointer f6 dib"
+						type="submit"
+						value="Sign in"
+					/>
+				</div>
+				<div class="lh-copy mt3">
+					<a href="#0" class="f6 link dim black db">Sign up</a>
+					<a href="#0" class="f6 link dim black db">Forgot your password?</a>
+				</div>
+			</form>
+		</main>
+	</body>
+</html>

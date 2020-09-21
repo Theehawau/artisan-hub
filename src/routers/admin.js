@@ -4,8 +4,12 @@ const multer = require("multer");
 const sharp = require("sharp");
 const Admin = require("../models/admin");
 const Artisan = require("../models/artisan");
+
+router.get("/", async (req, res) => {
+	res.render("admin/index");
+});
 // Create Admin
-router.post("/admin/create", async (req, res) => {
+router.post("/create", async (req, res) => {
 	try {
 		const admin = new Admin(req.body);
 		await admin.save();
@@ -70,7 +74,7 @@ const upload = multer({
 });
 //Creating new artisans
 router.post(
-	"/admin/artisan/new",
+	"/artisan/new",
 	upload.single("avatar"),
 	async (req, res) => {
 		try {
@@ -92,17 +96,18 @@ router.post(
 		res.status(400).send({ error: error.message });
 	}
 );
-router.post("/admin/artisan/new/noavatar", async (req, res) => {
+router.post("/artisan/new/noavatar", async (req, res) => {
 	try {
 		const artisan = new Artisan(req.body);
 		await artisan.save();
-		res.status(200).send(`${artisan.category} ${artisan.name} added to List`);
+		// res.status(200).send(`${artisan.category} ${artisan.name} added to List`);
+		res.redirect("/admin");
 	} catch (error) {
-		res.status(400).send(error);
+		res.status(400).send("Unable to save");
 	}
 });
 router.post(
-	"/admin/:id/addavatar",
+	"/:id/addavatar",
 	upload.single("avatar"),
 	async (req, res) => {
 		const buffer = await sharp(req.file.buffer)

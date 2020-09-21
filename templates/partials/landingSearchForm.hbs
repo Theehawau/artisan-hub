@@ -1,0 +1,27 @@
+<form action="/artisans" method="get" class="search-form">
+    <select name="lga" id="" class="btn-1" aria-label="Region" aria-placeholder="Region">
+        <option value="" selected disabled>Region</option>
+        <option value="ilorinSouth">Ilorin South</option>
+        <option value="ilorinEast">Ilorin East</option>
+        <option value="ilorinWesr">Ilorin West</option>
+    </select>
+    <select name="category" id="" class="btn-1" aria-label="Category" aria-placeholder="Category" value='' required>
+        <option value="" selected disabled>Expertise</option>
+        <option value="plumber">Plumber</option>
+        <option value="mechanic">Mechanic</option>
+        <option value="electrician">Electrician</option>
+        <option value="welder">Welder</option>
+        <option value="fashion designer">Fashion Designer</option>
+    </select>
+    <div class="hide-when-xsmall">
+        <input type="search" name="" id="" placeholder="Search artisan" aria-placeholder="Search artisan"
+            class="search-box" onkeyup="showResults(this.value)" />
+        <span class="highlight">
+        </span>
+        <div style="position: relative;width: 100%;top:-1px">
+            <div class="border" id="search-results">
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Search" class="submit-search" />
+</form>

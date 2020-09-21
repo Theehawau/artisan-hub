@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const Comment = require("./comments");
 const artisanSchema = new mongoose.Schema(
 	{
 		name: {
@@ -39,5 +39,10 @@ const artisanSchema = new mongoose.Schema(
 		timestamps: true,
 	}
 );
+artisanSchema.virtual("comments", {
+	ref: "Comment",
+	localField: "_id",
+	foreignField: "owner",
+});
 const Artisan = mongoose.model("Artisan", artisanSchema);
 module.exports = Artisan;

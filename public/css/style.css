@@ -76,12 +76,13 @@ body {
 	display: flex;
 	padding: 1.5em;
 }
-.artisan-label h3 {
+.artisan-label h3,
+.result-label > p {
 	color: #181818;
 }
 .artisan-label h3 > a,
 .body-head p > a,
-.result-label > a {
+.result-label p > a {
 	color: #69798d;
 	text-decoration: none;
 }
@@ -94,6 +95,7 @@ body {
 }
 .artisan-body {
 	margin: 0 auto;
+	min-width: 85%;
 	max-width: 85%;
 	padding: 0.5em 1em;
 	justify-content: space-between;
@@ -197,4 +199,51 @@ body {
 .bg-g {
 	background: #a9e400;
 	border: 1px solid #a9e400;
+}
+.artisan-card > a {
+	text-decoration: none;
+}
+#search-results {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	z-index: 100;
+	width: 100%;
+	background: white;
+	max-height: 350px;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	display: none;
+}
+
+@media (max-width: 480px) {
+	.show-when-xsmall {
+		display: block;
+	}
+	.hide-when-xsmall {
+		display: none;
+	}
+	.f5-s {
+		font-size: 0.875rem;
+	}
+	.w-80-s {
+		width: 80%;
+	}
+	.f6-ns {
+		font-size: 0.875rem;
+	}
+	.w-25-ns {
+		width: 25%;
+	}
+	.w-80-s {
+		min-width: 90%;
+	}
+	.center-s {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ph1-ns {
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+	}
 }

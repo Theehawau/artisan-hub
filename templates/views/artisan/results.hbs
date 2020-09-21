@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Search Results</title>
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/tachyons.min.css">
+	{{!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" /> --}}
+	{{!-- <script src="https://kit.fontawesome.com/049b95a946.js" crossorigin="anonymous"></script> --}}
+</head>
+
+<body>
+	<div class="result-header h3 p2">
+		{{>resultSearchForm}}
+	</div>
+	<div class="result-label ph3 ph5-m ph6-l f5-s f5-ns">
+		<p> <a href="/">Home /</a> Search Results</p>
+		<p>{{length}} results</p>
+	</div>
+	<div class="main ph3 ph5-m ph6-l">
+		<h4 class="near-black tl f5-s f5-ns" style="margin-bottom: 0;">
+			Search Results
+		</h4>
+		<div class="artisan-card">
+			{{#each artisans}}
+			<a id="artisanCard" class=" ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center "
+				href="artisan/{{id}}">
+				<img src="../images/Rectangle 13 (3).png" class="db w-100 br--top"
+					alt="Photo of a kitten looking menacing." />
+				<div class="pa2 ph3-ns pt3">
+					<div class="w-100 mt1 avatar-card">
+						<div class="dtc">
+							<img src="/artisan/{{id}}/avatar" class="br-100 h2 w2 dib" title="Artisans Image" />
+						</div>
+						<div class="dtc tr">
+							<h2 class="f5 mv0 ttc">{{name}}</h2>
+						</div>
+					</div>
+					<p class="f6 lh-copy measure mt2 mid-gray ttc">
+						{{category}}
+					</p>
+					<p class="f6 ttc">
+						<i class="fas fa-map-marker-alt"></i>
+						{{address}}
+					</p>
+				</div>
+			</a>
+			{{/each}}
+		</div>
+	</div>
+	{{>footer}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="/js/utils.js"></script>
+</body>
+
+</html>
